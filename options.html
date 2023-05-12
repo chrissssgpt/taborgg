@@ -1,22 +1,44 @@
+// options.html  
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-/* Estilos CSS */
+<style> 
+body {
+  width: 500px; 
+}
 </style>
 </head>
 <body>
-<h2>Cómo usar Tab Organizer</h2>
-<p>Tab Organizer automatiza la organización de tus pestañas por temas para que puedas encontrar las pestañas que necesitas más rápidamente.</p>
-<h3>Ver temas de pestañas sugeridos</h3> 
-<p>Tab Organizer analizará el título y URL de cada pestaña y sugerirá automatizaciones de temas que coincidan con tus intereses. Puedes ver los temas sugeridos haciendo clic en el botón "Temas sugeridos". Luego puedes activar cualquiera de los temas sugeridos haciendo clic en "Aplicar".</p>
-<h3>Crear o editar tus propios temas</h3>
-<p>También puedes crear tus propios temas personalizados en la sección "Temas personalizados". Ingresa un nombre para tu tema y agrega palabras clave relacionadas (separadas por comas) que Tab Organizer debería usar para identificar las pestañas de ese tema. Luego haz clic en "Agregar tema" para guardar el nuevo tema. </p>  
-<p>Para editar o eliminar un tema personalizado existente, simplemente selecciónalo de la lista de temas y realiza los cambios necesarios. Luego haz clic en "Actualizar tema" para guardar los cambios.</p>
-<h3>Crear carpetas para organizar tus pestañas</h3>
-<p>Tab Organizer te permite crear carpetas para organizar lógicamente tus temas de pestañas. Da a la carpeta un nombre descriptivo, selecciona los temas que quieres incluir en esa carpeta y haz clic en "Agregar carpeta".</p>  
-<p>Para administrar tus carpetas, puedes cambiar el nombre de una carpeta, agregar o eliminar temas de una carpeta o eliminar carpetas completas. Simplemente selecciona la carpeta que deseas editar y realiza los cambios necesarios.</p>  
-<p>Una vez que guardes tus temas y carpetas personalizados, Tab Organizer volverá a ordenar automáticamente tus pestañas según tus preferencias.</p>
+<h1>Tab Organizer</h1>
+<p>Personaliza tus pestañas. Guarda tus cambios con el botón "Guardar".</p>
+<h3>Grupos de pestañas</h3> 
+<form id="groups">
+<input type="text" id="newGroup">  
+<button id="addGroup">Agregar grupo</button> 
+</form>
+<div id="groupsList"></div>  
+<h3>Importar/Exportar grupos</h3>
+<button id="import">Importar</button>          
+<button id="export">Exportar</button>  
+<h3>Cerrar/Abrir/Recargar pestañas</h3>
+<p>Haz clic derecho en un grupo para cerrar, abrir o recargar todas sus pestañas</p> 
+<h3>Carpetas para grupos</h3> 
+<form id="folders">
+<select id="folderType">
+  <option value="primary">Primaria</option>
+  <option value="secondary">Secundaria</option> 
+</select>
+<input type="text" id="newFolder">
+<button id="addFolder">Agregar carpeta</button> 
+</form>
+<div id="foldersList"></div>
+<h3>Mostrar/Ocultar grupos</h3>
+<form id="showHide">
+<input type="checkbox" id="group1"> <label for="group1">Group 1</label><br> 
+<input type="checkbox" id="group2"> <label for="group2">Group 2</label><br>
+...
+</form> 
+<button id="save">Guardar</button>   
 <script src="options.js"></script>
 </body>
-</html> (edited) 
+</html>
