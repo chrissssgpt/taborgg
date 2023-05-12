@@ -1,0 +1,22 @@
+json
+{
+  "manifest_version": 2,  
+  "name": "Tab Organizer",
+  "description": "Organiza tus pestañas automáticamente por temas.",    
+  "permissions": ["tabs", "tabHide", "tabShow", "storage"], 
+  "background": { 
+    "scripts": ["background.js"] 
+  },  
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true 
+  },
+  "chrome_url_overrides": {
+    "options": "options.html" 
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
